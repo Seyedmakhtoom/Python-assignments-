@@ -1,6 +1,6 @@
 import math
 
-t = input("Please choose which operation do you ccarry out: ") 
+t = input("Please choose which operation do you carry out: ") 
 if t == "1":
     x = float(input("Please enter the number: "))
     op = input("Please choose operation: ")
@@ -12,11 +12,13 @@ if t == "1":
     if op == "tan":
         result = math.tan(math.radians(x))
     if op == "cot":
-        result = math.cot(math.radians(x))
+        result = math.cos(math.radians(x)) / math.sin(math.radians(x))
+
     if op == "r" and x > 0:
         result = math.sqrt(x)
     else:
-        print("Error")
+         print("Error ")
+
     if op == "f":
         if x == 0 and x == 1:
             print("1")
