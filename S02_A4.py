@@ -1,10 +1,11 @@
-import random
-n=int(input("Please enter the numbers of arrays: "))
-a = int(input("Please enter the range of numbers: "))
-p = []
+sum = 0
 
+while True:
+    a = (input("Please enter the numbers: "))
 
-b = random.sample(range(0,a),n)
-p.append(b)   
+    if a == "exit":
+        print(sum)
+        break
+    p = float(a)
     
-print(b)
+    sum = sum + p

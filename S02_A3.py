@@ -1,18 +1,13 @@
-import random 
+import random
+n=int(input("Please enter the numbers of arrays: "))
+
+p = []
 
 
-a = int(input("please enter the length of array:  "))
-b = int(input("Please enter the range of random number: "))
-
-
-lst = []
-
-for i in range(a):
-    Num = random.randint(0,b)
-    lst.append(Num)
-
+b = random.sample(range(0,50),n)
+p.append(b)   
     
-print(lst)
+print(b)
 
 
 
