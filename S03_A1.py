@@ -1,12 +1,13 @@
-import random
+a = [1, 2, 4, 4, 5, 6, 7, 7, 9, 9]
 
-num = int(input("Enter the lenght of array: "))
-p = []
-while len(p) < num:
-    n = random.randint(0,20)
-    p.append(n)
-
-print(p)
+def reformed(a):
+  return list(dict.fromkeys(a))
  
-delete = [set(p)]
-print("This is the final result without duplicate numbers", delete)
+print(a)
+FinalList = reformed(a)
+print(FinalList)
+
+    
+    
+
+     
