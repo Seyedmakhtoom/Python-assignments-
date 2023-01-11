@@ -1,0 +1,62 @@
+class Fraction:
+    def __init__(self, s, m):
+        self.surat = s
+        self.makhrj = m
+
+        
+    def sum(self, f2):
+            result = Fraction(None, None)
+            result.surat = self.surat * f2.makhrj + f2.surat * self.makhrj
+            result.makhrj = self.makhrj * f2.makhrj
+            return result
+        
+        
+    def minus(self, f2):
+        result = Fraction(None, None)
+        result.surat = self.surat * f2.makhrj - f2.surat * self.makhrj
+        result.makhrj = self.makhrj * f2.makhrj
+        return result  
+
+    def mul(self, f2):
+        result = Fraction(None, None)
+        result.surat = self.surat * f2.surat
+        result.makhrj = self.makhrj * f2.makhrj
+        return result
+
+
+
+    def div(self, f2):
+        result = Fraction(None, None)
+        result.surat = self.surat * f2.makhrj
+        result.makhrj = self.makhrj * f2.surat
+        return result
+
+
+    def show(self):
+        print(self.surat, "/", self.makhrj)
+
+
+fraction1 = Fraction(2, 3)
+print("1st Fraction: ")
+fraction1.show()
+
+fraction2 = Fraction(3, 4)
+print("2sd Fraction: ")
+fraction2.show()
+
+mul = fraction2.mul(fraction1)
+print("Zarb is: ")
+mul.show()
+
+sum = fraction2.sum(fraction1)
+print("Jam is: ")
+sum.show()
+
+minus = fraction2.minus(fraction1)
+print("Menha is: ")
+minus.show()
+
+division = fraction2.div(fraction1)
+print("Taghsim is: ")
+division.show()
+

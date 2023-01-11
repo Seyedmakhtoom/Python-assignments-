@@ -1,0 +1,62 @@
+class Time:
+    def __init__(self, h, m, s):
+        self.h = h
+        self.m = m
+        self.s = s
+
+
+    def show(self):
+        print(self.h, ":", self.m, ":", self.s)
+
+
+    def minus(self, t2):
+        result = Time(None, None, None)
+        result.h = self.h - t2.h
+        result.m = self.m - t2.m
+        result.s = self.s - t2.s
+        if result.m < 60:
+            result.m += 60
+            result.h -= 1
+            
+            
+        if result.s < 0:
+            result.s += 60
+            result.m -= 1
+            
+        return result
+
+
+    def s_t(self):
+        convert1 = 3600 * self.h + 60 * self.m + self.s
+        return convert1
+
+
+def s_t(self):
+    hour = int(self/3600)
+    minute = int((self - hour * 3600) / 60)
+    second1 = int(self - hour * 3600 - minute * 60)
+    return [hour, minute, second1]
+
+time1 = Time(10, 20, 25)
+time2 = Time(8, 30, 40)
+second = 7393
+
+print("time 1 is: ")
+time1.show()
+
+print("time 2 is: ")
+time2.show()
+
+
+
+m = time1.minus(time2)
+print("subtraction is : ")
+m.show()
+
+time = s_t(second)
+print ("into to Time:\n", time[0], ":", time[1], ":", time[2])
+
+second = time1.s_t()
+print("time 1 into second:\n" ,second)
+
+
